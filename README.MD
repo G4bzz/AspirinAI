@@ -27,10 +27,8 @@ Projeto de IA com sistema de decisão bayesiano.
 
 4. Instale as dependências:
 ```
-> pip install -r requisitos.txt
+> pip install -r requirements.txt
 ```
 
 5. Execute:
-```
-> python 
-```
+- Deve-se iniciar um flask server apontando para a pasta do projeto
