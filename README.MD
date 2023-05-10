@@ -22,7 +22,7 @@ Projeto de IA com sistema de decisão bayesiano.
 
 1. Clone o repositório:
 ```
-> git clone https://github.com/
+> git clone https://github.com/G4bzz/AspirinAI.git
 ```
 
 4. Instale as dependências:
