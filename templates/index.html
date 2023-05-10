@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="/static/css/index.css" rel="stylesheet" />
+    <link rel="manifest" href="/static/manifest.json">
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/pyodide/v0.23.2/full/pyodide.js"></script>
+    <title>Trabalho IA</title>
+
+</head>
+
+<body>
+    <div class="bg-image"></div>
+
+    <main class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">AspirinAI</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="conteudo">
+            <h1 class="titulo">AspirinAI: tome-a ou deixe-a</h1>
+            <div>
+                <label> Está com febre? </label>
+                <label><input type="radio" id="febre" name="grupoFebre" value="True" /> Sim</label>
+                <label><input type="radio" id="febre" name="grupoFebre" value="False"   /> Não</label>
+                <label><input type="radio" id="febre" name="grupoFebre" value="None"  checked  /> Indiferente</label>
+            </div>
+            <div>
+                <label> O termômetro utilizado, é confiável? </label>
+                <label><input type="radio" id="termometro" name="grupotermometro" value="True" /> Sim</label>
+                <label><input type="radio" id="termometro" name="grupotermometro" value="False" /> Não</label>
+                <label><input type="radio" id="termometro" name="grupotermometro" value="None"  checked  /> Indiferente</label>
+            </div>
+            <div>
+                <label> Possui alergia a Aspirina? </label>
+                <label><input type="radio" id="aspirina" name="grupoaspirina" value="True" /> Sim</label>
+                <label><input type="radio" id="aspirina" name="grupoaspirina" value="False" /> Não</label>
+                <label><input type="radio" id="aspirina" name="grupoaspirina" value="None" checked  /> Indiferente</label>
+            </div>
+            <div style="text-align: center; margin: 10px 0px 15px 0;">
+                <button id="botaoEnviar" py-click="runProg()">Enviar</button>
+            </div>
+            <h2 style="text-align: center"> Resultado: </h2>
+            <div id="respostaAspirina"style="text-align: center; margin-top: 20px;">
+            </div>
+        </div>
+    </main>
+    <footer id="rodape" class="text-center" style="margin: 20px">
+        &copy; Copyright 2023 - by Any, Gabriel, Gustavo, Rafael e Valmir
+    </footer>
+    <py-config type = "toml">
+        packages = ["numpy"]
+        [[fetch]]
+        files = ["/static/python/index.py", "/static/python/decision.py","/static/python/probability.py","/static/python/agents.py","/static/python/utils.py"]
+    </py-config>
+    <py-script>
+        from static.python.index import runProg
+        import js
+        botao = js.document.getElementById("botaoEnviar")
+
+        botao.onkeypress = runProg
+    </py-script>
+<script src="/static/js/pwa-scaffold.js"></script>
+</body>
+
+</html>
