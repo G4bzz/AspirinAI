@@ -13,6 +13,9 @@ Projeto de IA com sistema de decisão bayesiano.
 
 - https://aspirinai.netlify.app
 
+### Demonstração:
+- https://youtu.be/5ZRFEIWeh0w
+
 ### Video demonstração
 - https://youtu.be/5ZRFEIWeh0w
 ### Linguagens e Ferramentas
