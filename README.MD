@@ -18,9 +18,6 @@ Repositório de produção do AspirinAI: Projeto de IA com sistema de decisão b
 ### Repositório de desenvolvimento:
 - https://github.com/anycarolinys/SistemaDeDecisaoBayesiano
 
-### Relatório:
-- https://github.com/G4bzz/AspirinAI/blob/main/Relat%C3%B3rio.pdf
-
 ### Linguagens e Ferramentas
 
 * Linguagem: Python
